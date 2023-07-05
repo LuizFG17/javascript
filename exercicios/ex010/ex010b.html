@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLICIA FEDERAL</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique sua nacionalidade</h1>
+    País em que você está: <input type="text" name="txtn" id="txtn">
+    <input type="submit" value="Enviar" required onclick="verificar()">
+    <div id="res">
+    </div>
+    <script>
+        function verificar(){
+            var país = window.document.getElementById('txtn')
+            var res = window.document.getElementById('res')
+            if (país.value=='Brasil') {
+                res.innerHTML += `<p>Vivendo no ${país.value} você é Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Vivendo em ${país.value} você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
